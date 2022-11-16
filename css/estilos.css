@@ -1,0 +1,388 @@
+
+/*reset*/
+*{
+
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/*estilo de body*/
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color:rgb(179, 173, 173);
+}
+/* estilo de header para mobiles*/
+header{
+    
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;  
+    align-items: center;
+
+    
+}
+
+header nav ul li:hover{
+    background-color:grey;
+    transform: scale(0.9) ;
+   
+    
+    
+}
+ header img{
+    
+    margin: 30px; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    height: 70px;
+    width: 200px; 
+ }
+ header img:hover{
+    filter: drop-shadow(2px 2px 5px black);
+  }
+
+header h1{
+    display:none;
+    padding: 25px;
+    font-size:75px;
+   
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+nav ul li{
+     
+    display: inline;
+        
+}
+/*estilos menu par mobile*/
+
+.menu{
+    list-style: none;
+    padding: 25px;
+    position: sticky;
+
+   
+}
+
+
+/*estilo main mobile paguina home*/
+.recortes{
+    display: none;
+}
+.recorte{
+   margin: 30px;
+   display: flex;
+   flex-direction: column;
+}
+/*esrtilo main paguina acerca de mi para mobile*/
+  main .acerca{   
+  
+    display: flex;
+    align-items: center;
+    margin: 30px;  
+    flex-direction: column;
+    flex-wrap: wrap;    
+   
+}
+.descripcion-uno{
+    margin: 30px;
+   display: flex;
+   flex-direction: column;
+   
+
+}
+.acerca h2{
+    text-align: center;
+}
+.des-dos{
+    display: none;
+
+   
+}
+.des-uno{
+    display: none;
+}
+ 
+
+.des-tres{
+    text-align: center;
+    margin: 30px;
+}
+
+/*estilo  de paguina  consejos para mobile*/
+
+main .contenedor-consejo{
+    margin: 30px; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+   
+}
+.contenedor-consejo h2{
+    text-align: center;
+}
+
+.consejos-img{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+   
+ 
+ }
+ .consejos-video{
+    display:none;
+ }
+ 
+ .reglas {
+    
+  text-align: center;
+  margin: 50px;
+  
+  
+    
+ }
+ 
+ span{
+    background-color: whitesmoke;
+ }
+
+ 
+/*estilo  de paguina  galeria para mobile*/
+main .galeria{
+    margin: 30px; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+   }
+   .galeria img{
+    margin: 10px;
+   }
+.galeria h2 {
+    text-align: center;
+}
+.galeria h3{
+    text-align: center;
+}
+.paisajes{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    
+ }
+.retratos{
+    margin: 30px;
+        display: flex;
+    flex-direction: column;
+   
+ }
+.astrofotografia{
+    margin: 30px;
+   display: flex;
+   flex-direction: column;
+}
+
+/*estilo de paguina de contacto para mobile*/
+
+ .formulario{
+    display: flex;
+    align-items: center;
+    margin: 30px;  
+    flex-direction: column;
+    flex-wrap: wrap;  
+    text-align: center;  
+}
+.formulario h3{
+    text-align: center;
+}
+.mensaje input{
+    margin-top: 15px;
+    height: 100px;
+}
+.enviar{
+    text-align: center;
+
+   
+ }
+ .enviar:hover{
+    transform: scale(1.10);  
+     
+    color: black;
+ }
+
+
+/*estrilo footer*/
+footer h2{
+   text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+footer img{
+    
+    width: 23px;
+    height: 23px
+}
+
+footer ul li {
+    text-align: center;
+    list-style: none;
+    padding: 15px;
+
+}
+/*estilo para computadora*/
+@media screen and (min-width:1024px){
+    /* estilo de header*/
+    header{
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+       
+                    
+    }
+    header h1{
+        display: block;
+        display: flex;
+       
+            
+        
+    }
+    header h1:hover{
+        filter: drop-shadow(2px 2px 5px black);
+    }
+
+    header nav ul{
+        list-style: none;
+        display: flex;
+        padding: 25px;        
+        position: sticky;       
+
+    }
+    header img{
+        display: flex;
+        width: 6rem;
+        height: 3rem;
+    }
+  header img:hover{
+    filter: drop-shadow(2px 2px 5px black);
+  }
+   
+/* estilos de paguina galeria*/
+    .galeria {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "h2-galeria h2-galeria h2-galeria" 
+        "h3-a h3-r h3-p"
+        "img-a img-r img-p";
+       
+    }
+     .h2{
+        grid-area: h2-galeria;
+        
+      
+    }
+     .h3-a{
+        grid-area:h3-a ;
+    }
+     .h3-r{
+        grid-area:h3-r;
+    }
+   .h3-p{
+        grid-area:h3-p ;
+    }
+   .astrofotografia{
+        grid-area: img-a;
+    }
+     .retratos{
+        grid-area: img-r;
+    }
+     .paisajes{
+        grid-area: img-p;
+    }
+     h2{
+        justify-self: start;
+        text-decoration: underline;
+        margin: 30px;
+   }
+  .h3{
+    font-size: 20px;
+   
+   }
+/* estilos para paguina consejos*/
+   .contenedor-consejo{
+        display: grid;
+        
+        grid-template-columns: auto;
+        grid-template-rows:auto;
+        grid-template-areas:
+        "h2-consejo h2-consejo " 
+        "imagen  video"
+        "parrafo parrafo"
+        
+   }
+      
+
+   .h2-consejo{
+    grid-area: h2-consejo;
+    }    
+
+    .consejos-img{
+        grid-area: imagen;
+    }
+    .consejos-video{
+        grid-area: video;
+    }
+     .regla{
+        grid-area: parrafo;
+    }
+    
+    .consejos-video{
+        display: block;
+    }
+    .consejos-img{
+
+       justify-self: self-end;
+          height: 600px;
+           width: 600px;
+           padding: 20px;
+    }
+    .consejos-video {
+        margin-top: 60px;
+        justify-self:stretch;
+
+
+    }
+    .h2-consejo{
+        justify-self: center;
+        
+    }
+
+      
+    .regla p{
+       text-align: center;   
+       font-size: 20px;  
+         }
+
+
+   /* estilos de home*/
+   .recorte{
+    display: none;
+   }
+   .recortes{
+    display: block;
+   }
+   .recortes{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    
+   }
+   .recortes img{
+    margin-top: 10px;
+   }
+ 
+}
